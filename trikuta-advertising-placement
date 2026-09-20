@@ -1,5 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trikuta Advertising and Placement</title>
 
-section id="about">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f7f9fc;
+    color:#172033;
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+}
+
+section{
+    padding:70px 0;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+h1,h2,h3{
+    line-height:1.2;
+}
+
+.kicker{
+    color:#e85d04;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:10px;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about-img img{
+    width:100%;
+    border-radius:20px;
+}
+
+.services{
+    background:#ffffff;
+}
+
+.section-head{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+@media(max-width:768px){
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:45px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+<section id="about">
   <div class="container about-grid">
     <div class="about-img"><img src="assets/trikuta-3.png" alt="Trikuta Advertising and Placement office"></div>
     <div class="about-copy">
@@ -163,9 +244,5 @@ section id="about">
     </div>
   </div>
 </section>
-
-srcs = [ Path("/mnt/data/1000074605.png"), Path("/mnt/data/1000074606.png"), Path("/mnt/data/1000074607.png"), ] for i, src in enumerate(srcs, 1): shutil.copy2(src, root / "assets" / f"trikuta-{i}.png")
-html = r'''
-
-zip_path = Path("/mnt/data/Trikuta-Advertising-Placement-Website.zip") if zip_path.exists(): zip_path.unlink() with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z: for p in root.rglob("*"): if p.is_file(): z.write(p, p.relative_to(root))
-print(f"Created: {zip_path}") print(f"Website folder: {root}")
+</body>
+</html>
