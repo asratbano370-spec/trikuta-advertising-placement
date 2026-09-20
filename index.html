@@ -164,8 +164,6 @@ section id="about">
   </div>
 </section>
 
-srcs = [ Path("/mnt/data/1000074605.png"), Path("/mnt/data/1000074606.png"), Path("/mnt/data/1000074607.png"), ] for i, src in enumerate(srcs, 1): shutil.copy2(src, root / "assets" / f"trikuta-{i}.png")
-html = r'''
 
-zip_path = Path("/mnt/data/Trikuta-Advertising-Placement-Website.zip") if zip_path.exists(): zip_path.unlink() with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z: for p in root.rglob("*"): if p.is_file(): z.write(p, p.relative_to(root))
-print(f"Created: {zip_path}") print(f"Website folder: {root}")
+
+
